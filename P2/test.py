@@ -405,12 +405,12 @@ class rankineController():
         and updates the rankineView as well
         :param *args: a tuple containing widgets that get updated in the View
         """
-        self.Model =  rankineModel()  # In MVC pattern, the controller should hold a reference to the model
-        self.View =  rankineView()  # In MVC pattern, the controller should hold a reference to the view
+        self.Model = rankineModel()  # In MVC pattern, the controller should hold a reference to the model
+        self.View = rankineView()  # In MVC pattern, the controller should hold a reference to the view
         self.IW = args[0]  # an array of widgets that are for user input
         self.DW = args[1]  # an array of widgets that are for display
-        self.View.setWidgets(self.IW)
-
+        self.View.setWidgets(
+            *args)  # call the setWidgets function of the view with self.IW and self.DW as arguments (see unpacking)
 
         self.buildVaporDomeData()
 

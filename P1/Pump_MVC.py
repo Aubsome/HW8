@@ -142,27 +142,38 @@ class Pump_View():
 
         # Plotting best fit lines
         self.ax.plot(headx, heady, 'k--', label='Head (R^2 = 1.000)')
-        self.ax.plot(effx, effy, 'k:', label='Efficiency (R^2 = 0.989)')
 
         # Plotting head coefficients as hollow circles
-        head_coeffs = Model.LSFitHead.coeffs
-        for i in range(len(head_coeffs)):
-            self.ax.plot(headx_data[i], heady_data[i], 'o', color='black', markersize=5)
+        for i in range(len(headx_data)):
+            if i == 0:
+                self.ax.plot(headx_data[i], heady_data[i], 'o', markerfacecolor='none', markeredgecolor='black',
+                             markersize=5, label='Head')
+            else:
+                self.ax.plot(headx_data[i], heady_data[i], 'o', markerfacecolor='none', markeredgecolor='black',
+                             markersize=5)
 
         # Creating a secondary y-axis for efficiency
         ax2 = self.ax.twinx()
+        # Use ax2 for plotting efficiency best fit line
+        ax2.plot(effx, effy, 'k:', label='Efficiency (R^2 = 0.989)')
 
         # Plotting efficiency coefficients as hollow triangles
         for i in range(len(effx_data)):
-            ax2.plot(effx_data[i], effy_data[i], '^', color='black', markersize=5)
+            if i == 0:
+                ax2.plot(effx_data[i], effy_data[i], '^', markerfacecolor='none', markeredgecolor='black', markersize=5,
+                         label='Efficiency')
+            else:
+                ax2.plot(effx_data[i], effy_data[i], '^', markerfacecolor='none', markeredgecolor='black', markersize=5)
 
         # Adding legends
-        self.ax.legend(loc='upper left', frameon=False)
-        ax2.legend(loc='upper right', frameon=False)
+        lines, labels = self.ax.get_legend_handles_labels()
+        lines2, labels2 = ax2.get_legend_handles_labels()
+        self.ax.legend(lines, labels, loc='center left', frameon=True)
+        ax2.legend(loc='upper right', frameon=True)
 
-        self.ax.set_xlabel('Flow')
-        self.ax.set_ylabel('Head')
-        ax2.set_ylabel('Efficiency')
+        self.ax.set_xlabel('Flow (gpm)')
+        self.ax.set_ylabel('Head (ft)')
+        ax2.set_ylabel('Efficiency (%)')
 
         # Draw the canvas
         self.canvas.draw()

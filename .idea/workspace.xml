@@ -5,29 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3feca8c3-ab07-4e62-ac2f-5ea98b04a9e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/HW8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1/LeastSquares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1/Pump_MVC.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1/pump.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1/pump.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1/pump1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1/pump_app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2/Calc_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2/Rankine_Classes_MVC.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2/Rankine_GUI.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2/Rankine_GUI.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2/Rankine_app_MVC.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2/UnitConversions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P2/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HW8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HW8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1/Pump_MVC.py" beforeDir="false" afterPath="$PROJECT_DIR$/P1/Pump_MVC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1/pump_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/P1/pump_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P2/Rankine_Classes_MVC.py" beforeDir="false" afterPath="$PROJECT_DIR$/P2/Rankine_Classes_MVC.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +42,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.LeastSquares.executor": "Debug",
     "Python.Pump_MVC.executor": "Debug",
     "Python.Rankine_Classes_MVC.executor": "Debug",
     "Python.Rankine_app_MVC.executor": "Debug",
@@ -75,16 +72,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/P1/LeastSquares.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

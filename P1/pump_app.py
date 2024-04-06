@@ -4,6 +4,7 @@ import PyQt5.QtWidgets as qtw
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 
+
 from pathlib import Path
 
 import sys
