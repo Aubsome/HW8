@@ -86,7 +86,7 @@ class MainWindow(qtw.QWidget, Ui_Form):
         self.setWindowTitle('s:{:0.2f} {}, T:{:0.2f} {}'.format(self.oldXData,sUnit, self.oldYData,TUnit))
 
     def Calculate(self):
-        self.RC.Model.updateModel()
+        self.RC.updateModel()
 
 
     def SelectQualityOrTHigh(self):
@@ -109,12 +109,10 @@ class MainWindow(qtw.QWidget, Ui_Form):
             self.RC.View.updateUnits('English')
 
     def setNewPHigh(self):
-        new_p_high = float(self.le_PHigh.text())
-        self.RC.Model.setNewPHigh(new_p_high)
+        self.RC.setNewPHigh()
 
     def setNewPLow(self):
-        new_p_low = float(self.le_PLow.text())
-        self.RC.Model.setNewPLow(new_p_low)
+        self.RC.setNewPLow()
 
 #endregion
 

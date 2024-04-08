@@ -58,11 +58,9 @@ class rankineView():
 
     def setWidgets(self, *args):
         # create class variables for the input widgets
-        self.rb_SI, self.le_PHigh, self.le_PLow, self.le_TurbineInletCondition, self.rdo_Quality, self.le_TurbineEff, self.cmb_XAxis, self.cmb_YAxis, self.chk_logX, self.chk_logY = \
-        args[0]
+        self.rb_SI, self.le_PHigh, self.le_PLow, self.le_TurbineInletCondition, self.rdo_Quality, self.le_TurbineEff, self.cmb_XAxis, self.cmb_YAxis, self.chk_logX, self.chk_logY = args[0]
         # create class variables for the display widgets
-        self.lbl_PHigh, self.lbl_PLow, self.lbl_SatPropLow, self.lbl_SatPropHigh, self.lbl_TurbineInletCondition, self.lbl_H1, self.lbl_H1Units, self.lbl_H2, self.lbl_H2Units, self.lbl_H3, self.lbl_H3Units, self.lbl_H4, self.lbl_H4Units, self.lbl_TurbineWork, self.lbl_TurbineWorkUnits, self.lbl_PumpWork, self.lbl_PumpWorkUnits, self.lbl_HeatAdded, self.lbl_HeatAddedUnits, self.lbl_ThermalEfficiency, self.canvas, self.figure, self.ax = \
-        args[1]
+        self.lbl_PHigh, self.lbl_PLow, self.lbl_SatPropLow, self.lbl_SatPropHigh, self.lbl_TurbineInletCondition, self.lbl_H1, self.lbl_H1Units, self.lbl_H2, self.lbl_H2Units, self.lbl_H3, self.lbl_H3Units, self.lbl_H4, self.lbl_H4Units, self.lbl_TurbineWork, self.lbl_TurbineWorkUnits, self.lbl_PumpWork, self.lbl_PumpWorkUnits, self.lbl_HeatAdded, self.lbl_HeatAddedUnits, self.lbl_ThermalEfficiency, self.canvas, self.figure, self.ax = args[1]
 
     def selectQualityOrTHigh(self, Model=None):
         """
@@ -100,7 +98,7 @@ class rankineView():
         PCF = 1 if SI else UC.psi_to_bar
         satProp = Model.steam.getsatProps_p(float(self.le_PHigh.text()) * PCF)
         self.lbl_SatPropHigh.setText(satProp.getTextOutput(SI=SI))
-        self.SelectQualityOrTHigh(Model)
+        self.selectQualityOrTHigh(Model)
 
     def setNewPLow(self, Model=None):
         SI = self.rb_SI.isChecked()
@@ -409,7 +407,7 @@ class rankineController():
         self.View =  rankineView()  # In MVC pattern, the controller should hold a reference to the view
         self.IW = args[0]  # an array of widgets that are for user input
         self.DW = args[1]  # an array of widgets that are for display
-        self.View.setWidgets(self.IW)
+        self.View.setWidgets(self.IW, self.DW)
 
 
         self.buildVaporDomeData()
